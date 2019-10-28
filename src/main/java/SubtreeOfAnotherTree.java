@@ -48,15 +48,11 @@ public class SubtreeOfAnotherTree {
                 }
                 if (answer) return true;
             }
-
             if (current.left != null) qs.add(current.left);
             if (current.right != null) qs.add(current.right);
         }
         return false;
     }
-
-
-}
 
 
 }
