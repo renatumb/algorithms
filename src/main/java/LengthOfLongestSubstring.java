@@ -33,10 +33,9 @@ public class LengthOfLongestSubstring {
                 letters = new TreeSet<>();
                 b++;
                 end = b;
-                letters.add(s.charAt(end));
-            } else {
-                letters.add(s.charAt(end));
+
             }
+            letters.add(s.charAt(end));
             size = letters.size() > size ? letters.size() : size;
         }
         return size;
