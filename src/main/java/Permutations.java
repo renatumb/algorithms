@@ -17,6 +17,12 @@ public class Permutations {
 
         for (int i = 1; i < nums.length; i++) {
             List<List<Integer>> aux = new LinkedList<>();
+
+            // For every list created so far, it adds a item at every position, example
+            // current Lists {1,2} {2,1}, element to be inserted 3, the following list will be
+            // {1,2} ->> {3,1,2} {1,3,2} {1,2,3}
+            // {2,1} ->> {3,2,1} {2,3,1} {2,1,3}
+            //
             for (List<Integer> tmpListRet : result) {
                 for (int j = 0; j <= tmpListRet.size(); j++) {
                     LinkedList<Integer> t = new LinkedList<>(tmpListRet);
